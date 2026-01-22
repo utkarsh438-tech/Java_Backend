@@ -1,0 +1,31 @@
+package Collection.Set;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentSkipListSet;
+
+public class Set_test {
+    public static void main(String[] args) {
+        NavigableSet<Integer> set = new TreeSet<>();
+        set.add(12);
+        set.add(1);
+        set.add(1);
+        set.add(67);
+        System.out.println(set);
+        System.out.println(set.contains(12));
+        System.out.println(set.remove(67));
+        set.clear();
+        System.out.println(set.isEmpty());
+        for(int i: set){
+            System.out.println(i);
+        }
+
+        // for thread safety
+
+        Set<Integer> set1 =  new ConcurrentSkipListSet<>();
+
+        // unmodifiable
+
+        Set<Integer> integers = Set.of(1, 2, 3,4,5,6,7,8,9,54,4323,545,4545);
+
+    }
+}
